@@ -18,7 +18,7 @@ Nested hashes are a very common way to store and operate on complex associated d
 
 API stands for "Application Programming Interface" and here refers to the way in which organizations, companies and governments will expose their data to the public for use. 
 
-New York City, for example, has a robust API called NYC Open Data. Developers can connect to this API to find information about city programs, public housing, parks, schools, construction, you name it. 
+New York City, for example, has a robust API called NYC Open Data. Developers can connect to this API to find information about city programs, public housing, parks, schools, construction, health information––[like this collection of NYC doctors who participate in project REACH](https://data.cityofnewyork.us/resource/7btz-mnc8.json)––you name it.
 
 When you send a request for data to such an API, the data you get back from them will be in the form of a nested hash that can contain information about thousands of records. 
 
@@ -26,52 +26,49 @@ We'll learn a lot more about APIs later on in this course. For now, just underst
 
 ### Nested Hashes Model Real-World Data
 
-We can imagine so many real-world situations and environments in which we are dealing with complicated collections of data. Take the example of a simple address book. 
+We can imagine so many real-world situations and environments in which we are dealing with complicated collections of data. Take the example of a simple list of people. 
 
-An individual contact from address book can be stored in a simple hash:
-
-```ruby
-zoe = {name: "Zoe", phone: "917-555-9875", address: "24 W. 124th Street, NY, NY"}
-``` 
-
-However, an address book contains more than one contact. We could collect all of our individual person hashes and store them in a `contacts` array:
+Let's take, for example, a list of instructors at the Flatiron School. They can be stored in an array like this:
 
 ```ruby
-contacts = [
-	{last_name: "DeBenedetto", first_name: "Zoe", phone: "917-555-9875"}, 
-	{last_name: "DeBenedetto", first_name: "Richard", phone: "917-555-0912"}
-	{last_name: "Londin", first_name: "Victoria", phone: "917-555-0912"}
-]
+instructors = ["Avi", "Jeff", "Rose"]
 ```
 
-This works, but it's not a great model of a real address book. In a real address book, contacts are sorted, or grouped, usually by last name. In our collection of hashes above, there is no way to organize our data like that. 
+What happens when we expand our data collection to include the members of the development team here at the Flatiron School? We could create yet another array:
+
+```ruby
+dev_team = ["Jonas", "Logan", "Amanda", "Seiji", "Kate", "Spencer"]
+```
+
+With this set-up, though, there is no way to associate our two arrays and tell them that they both belong to the Flatiron School.
 
 This is where nested hashes come in. 
 
 ## Our First Nested Hash
 
-With a nested hash, we can create a key that points to a value of *another hash or an array*. Let's take a look:
+With a nested hash, we can store complex collections of data. In other words, we can store data that is associated to other data via categories and subcategories. 
+
+Both the `dev_team` array and the `instructors` array should be associated to the Flatiron School. So, we can create a hash, `flatiron_school`, that contains keys to denote the `instructors` and `dev_team` categories. We can point these keys to the arrays that contain our instructors and dev team members respectively. 
+
+Let's take a look:
 
 ```ruby
-contacts = {
-	"D" =>[
-			{last_name: "DeBenedetto", first_name: "Zoe", phone: "917-555-9875"}, 
-			{last_name: "DeBenedetto", first_name: "Richard", phone: "917-555-0912"}
-		  ], 
-	"L" => [
-			{last_name: "Londin", first_name: "Victoria", phone: "917-555-0912"}
-		  ]
+flatiron_school = {
+  instructors: ["Avi", "Jeff", "Rose"], 
+  dev_team: ["Jonas", "Logan", "Amanda", "Seiji", "Kate", "Spencer"],
 }
 ```
+In this example, each key in our hash points to a value that is an array. 
 
 Nested hashes allow us to further group, or associate, the data we are working with. They help us to deal with situations in which a category or piece of data is associated not just to one discrete value, but to a collection of values. In such a situation, we can create a hash key that points to a value of another hash or an array. 
 
 ### A Note On Mixing our Collection Types
 
-You may have noticed in the above examples that we used both an array of hashes and a hash in which the value of a key is an array. 
+You may have noticed in the above example that we have a hash in which the value of a key is an array. 
 
 Understand that arrays and hashes can store *any type of data*. In other words, the individual index items of an array can be strings, integers, even other arrays and hashes. The same is true of hashes. The values that hash keys point to may be strings, integers, even arrays and hashes. 
 
+In fact, one of the most common nested data structures you'll see when working with APIs, as discussed above, is an array of hashes. 
 
 ## Nested Hash Example
 
@@ -87,8 +84,7 @@ flatiron_school = {
 }
 ```
 
-In the above example, each key points to an array of names. 
-We may not know how to work with nested hashes just yet, but we *do* know how to work with one-dimensional hashes and arrays. 
+In the above example, each key points to an array of names. We may not know how to work with nested hashes just yet, but we *do* know how to work with one-dimensional hashes and arrays. 
 
 The `flatironschool` hash has a key of `:instructors`. The value of that key is an array of instructors. In order to access that array, we can use the `[]` method we've been using all along to grab the values of a particular hash key.
 
@@ -108,4 +104,4 @@ instructors[0]
 #  => "Avi"
 ```
 
-Nested hashes can get pretty complicated. Read through both of the examples in this lesson again before moving on. It's okay if you don't understand everything, just try to get comfortable reading these two nested hashes. 
+Nested hashes can get pretty complicated. Read through the example in this lesson again before moving on. It's okay if you don't understand everything, just try to get comfortable reading through that nested hash. 
