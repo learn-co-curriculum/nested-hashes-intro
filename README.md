@@ -20,6 +20,8 @@ API stands for "Application Programming Interface" and here refers to the way in
 
 New York City, for example, has a robust API called NYC Open Data. Developers can connect to this API to find information about city programs, public housing, parks, schools, construction, health information––[like this collection of NYC doctors who participate in project REACH](https://data.cityofnewyork.us/resource/7btz-mnc8.json)––you name it.
 
+**Top-Tip:** To view the nested hash data from the NYC Open Data API, linked to above, in an organized and legible way in your browser, use the [Chrome JSON Viewer extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=en-US). 
+
 When you send a request for data to such an API, the data you get back from them will be in the form of a nested hash that can contain information about thousands of records. 
 
 We'll learn a lot more about APIs later on in this course. For now, just understand that nested hashes are a very common occurrence in programming, they are used to store complex collections of data and you will encounter them in particular when working with APIs, among other places.
