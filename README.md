@@ -1,12 +1,16 @@
 # Introduction to Nested Hashes
+## Overview
 
-1. Understand what a nested hash is and why we use them. 
-2. Become familiar with a few situations in which you will encounter nested hashes as a developer. 
-3. Become familiar with the structure of a nested hash. 
+We'll introduce nested, or multidimensional, hashes and explain how they're useful in programming. 
+
+## Objectives
+
+1. Describe how nested hashes can store complex associations of data.
+2. Give examples of real-world situations that can require nested hashes. 
+3. Describe the structure of a nested hash.
+4. Retrieve data from a nested hash.
 
 ## Introduction: Why Use Nested Hashes
-
-Nested hashes are used to store complex collections of data.
 
 So far, we've seen hashes that store values in associated keys. In the hashes we've built up until now, each key points to a single value. Hashes are so useful, however, because they can be multi-dimensional, or nested. A key in a hash can point to a value that is a *collection of objects*, i.e. an array or even another hash. 
 
@@ -24,11 +28,11 @@ New York City, for example, has a robust API called NYC Open Data. Developers ca
 
 When you send a request for data to such an API, the data you get back from them will be in the form of a nested hash that can contain information about thousands of records. 
 
-We'll learn a lot more about APIs later on in this course. For now, just understand that nested hashes are a very common occurrence in programming, they are used to store complex collections of data and you will encounter them in particular when working with APIs, among other places.
+We'll learn a lot more about APIs later on in this course. For now, just understand that nested hashes are a very common occurrence in programming. They are used to store complex collections of data and you will encounter them when working with APIs, among other places.
 
 ### Nested Hashes Model Real-World Data
 
-We can imagine so many real-world situations and environments in which we are dealing with complicated collections of data. Take the example of a simple list of people. 
+We can imagine so many real-world situations and environments in which we are dealing with complicated collections of data. 
 
 Let's take, for example, a list of instructors at the Flatiron School. They can be stored in an array like this:
 
@@ -68,7 +72,7 @@ Nested hashes allow us to further group, or associate, the data we are working w
 
 You may have noticed in the above example that we have a hash in which the value of a key is an array. 
 
-Understand that arrays and hashes can store *any type of data*. In other words, the individual index items of an array can be strings, integers, even other arrays and hashes. The same is true of hashes. The values that hash keys point to may be strings, integers, even arrays and hashes. 
+Understand that arrays and hashes can store *any type of data*. In other words, the individual index items of an array can be strings, integers, or even other arrays and hashes. The same is true of hashes. The values that hash keys point to may be strings, integers, even arrays and hashes. 
 
 In fact, one of the most common nested data structures you'll see when working with APIs, as discussed above, is an array of hashes. 
 
@@ -106,4 +110,4 @@ instructors[0]
 #  => "Avi"
 ```
 
-Nested hashes can get pretty complicated. Read through the example in this lesson again before moving on. It's okay if you don't understand everything, just try to get comfortable reading through that nested hash. 
+Nested hashes can get pretty complicated. Read through the example in this lesson again before moving on. It's okay if you don't understand everything; just try to get comfortable reading through the above nested hash. 
