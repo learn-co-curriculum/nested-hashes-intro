@@ -96,8 +96,7 @@ The `flatiron_school` hash has a key of `:instructors`. The value of that key is
 
 ```ruby
 instructors = flatiron_school[:instructors]
-puts instructors 
-  => ["Avi", "Jeff", "Rose"]
+ # => ["Avi", "Jeff", "Rose"]
 ``` 
 Here, we set a variable, `instructors`, equal to the return value of calling `flatiron_school[:instructors]`, which is simply the array of instructors. 
 
