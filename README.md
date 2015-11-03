@@ -92,14 +92,14 @@ flatiron_school = {
 
 In the above example, each key points to an array of names. We may not know how to work with nested hashes just yet, but we *do* know how to work with one-dimensional hashes and arrays. 
 
-The `flatironschool` hash has a key of `:instructors`. The value of that key is an array of instructors. In order to access that array, we can use the `[]` method we've been using all along to grab the values of a particular hash key.
+The `flatiron_school` hash has a key of `:instructors`. The value of that key is an array of instructors. In order to access that array, we can use the `[]` method we've been using all along to grab the values of a particular hash key.
 
 ```ruby
-instructors = flatironschool[:instructors]
+instructors = flatiron_school[:instructors]
 puts instructors 
   => ["Avi", "Jeff", "Rose"]
 ``` 
-Here, we set a variable, `instructors`, equal to the return value of calling `flatironschool[:instructors]`, which is simply the array of instructors. 
+Here, we set a variable, `instructors`, equal to the return value of calling `flatiron_school[:instructors]`, which is simply the array of instructors. 
 
 Now, to operate on that collection of instructors, we can simply operate on our `instructors` array. 
 
