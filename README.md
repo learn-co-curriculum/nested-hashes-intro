@@ -110,3 +110,5 @@ instructors[0]
 ```
 
 Nested hashes can get pretty complicated. Read through the example in this lesson again before moving on. It's okay if you don't understand everything; just try to get comfortable reading through the above nested hash. 
+
+<a href='https://learn.co/lessons/nested-hashes-intro' data-visibility='hidden'>View this lesson on Learn.co</a>
