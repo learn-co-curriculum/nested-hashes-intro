@@ -61,7 +61,7 @@ Let's take a look:
 ```ruby
 flatiron_school = {
   instructors: ["Avi", "Jeff", "Rose"], 
-  dev_team: ["Jonas", "Logan", "Amanda", "Seiji", "Kate", "Spencer"],
+  dev_team: ["Jonas", "Logan", "Amanda", "Seiji", "Kate", "Spencer"]
 }
 ```
 In this example, each key in our hash points to a value that is an array. 
