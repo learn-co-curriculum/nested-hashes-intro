@@ -111,4 +111,4 @@ instructors[0]
 
 Nested hashes can get pretty complicated. Read through the example in this lesson again before moving on. It's okay if you don't understand everything; just try to get comfortable reading through the above nested hash. 
 
-<a href='https://learn.co/lessons/nested-hashes-intro' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/nested-hashes-intro' title='Introduction to Nested Hashes'>Introduction to Nested Hashes</a> on Learn.co and start learning to code for free.</p>
