@@ -46,9 +46,15 @@ What happens when we expand our data collection to include the members of the de
 dev_team = ["Jonas", "Logan", "Amanda", "Seiji", "Kate", "Spencer"]
 ```
 
-With this set-up, though, there is no way to associate our two arrays and tell them that they both belong to the Flatiron School.
+But both of these teams are smaller parts of the Flatiron School team. We'd like to
+group them together into a larger collection _that contains both_. But we want to
+do this in a way that keeps a "label" describing each "sub-collection's" focus.
 
-This is where nested hashes come in. 
+A collection that allows us to label sub-elements, either single like a `String` or
+a collection like an `Array` is a `Hash`. In Ruby, `Hash` and `Array` are the 
+first collection classes we really use heavily. In time, you might learn others,
+but these two are the daily partners to Ruby programmers.
+
 
 ## Our First Nested Hash
 
